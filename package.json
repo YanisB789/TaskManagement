@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend",
-    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "prepare": "node ./node_modules/husky/bin.js install",
-    "all": "npm run install-all && npm run dev"
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "setup": "npm run install-all && npx husky && echo npx lint-staged > .husky/pre-commit",
+    "start": "npm run dev",
+    "all": "npm run setup && npm start"
   },
   "lint-staged": {
     "backend/**/*.js": [
-      "cd backend && npm run lint"
+      "eslint --config backend/.eslintrc.json --fix"
     ],
     "frontend/src/**/*.{js,jsx}": [
-      "cd frontend && npm run lint"
+      "eslint --config frontend/.eslintrc.json --fix"
     ]
   },
   "devDependencies": {
