@@ -60,7 +60,7 @@ const Login = () => {
         </button>
 
         <p>
-          Pas de compte ? <Link to="/register">S'inscrire</Link>
+          Pas de compte ? <Link to="/register">S&apos;inscrire</Link>
         </p>
       </form>
     </div>
