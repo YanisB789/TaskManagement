@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "node ./node_modules/nodemon/bin/nodemon.js server.js",
+    "dev": "nodemon server.js",
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --detectOpenHandles",
@@ -22,10 +22,7 @@
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
     "uuid": "^9.0.1",
-    "dotenv": "^16.4.5",
-    "express-validator": "^7.0.1",
-    "helmet": "^7.1.0",
-    "express-rate-limit": "^7.2.0"
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
