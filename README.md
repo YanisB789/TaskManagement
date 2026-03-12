@@ -51,4 +51,5 @@ Nous avons vérifié le bon fonctionnement de l'application :
 Nous avons ensuite créer des tests unitaires pour l'intégration et les e2e.
 
 ![alt text](image.png)
+
 ![alt text](image-1.png)
