@@ -16,8 +16,10 @@ Nous avons aussi lancer l'application après avoir exécuter ces commandes :
 cd backend
 npm install
 npm run dev
-POur voir si tout fonctionnait et appliquer les modifications nécessaires à ce bon foctionnement.
+Pour voir si tout fonctionnait et appliquer les modifications nécessaires à ce bon fonctionnement.
+![alt text](image-2.png)
 
 Nous avons ensuite créer des tests unitaires pour l'intégration et les e2e.
 
 ![alt text](image.png)
+![alt text](image-1.png)
