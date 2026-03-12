@@ -1,0 +1,24 @@
+{
+  "name": "taskmanagement-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "prepare": "node ./node_modules/husky/bin.js install",
+    "all": "npm run install-all && npm run dev"
+  },
+  "lint-staged": {
+    "backend/**/*.js": [
+      "cd backend && npm run lint"
+    ],
+    "frontend/src/**/*.{js,jsx}": [
+      "cd frontend && npm run lint"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
+  }
+}

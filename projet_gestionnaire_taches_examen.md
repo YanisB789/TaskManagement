@@ -18,17 +18,17 @@ Vous travaillerez en équipes de 3/4 personnes pour créer une application de ge
 
 #### Tâches à réaliser :
 1. **Création du repository GitHub**
-   - Un membre crée le repo principal
-   - Configuration des permissions et/ou des branches
-   - Mise en place du README.md avec la documentation du projet
+   - Un membre crée le repo principal ✅
+   - Configuration des permissions et/ou des branches ✅
+   - Mise en place du README.md avec la documentation du projet 
 
 2. **Configuration du workflow**
-   - Choix du workflow Git
-   - Configuration des règles de protection de branche(s)
+   - Choix du workflow Git ✅
+   - Configuration des règles de protection de branche(s) ✅
 
 3. **Organisation des équipes**
-   - Attribution des rôles : Tests, DevOps, etc...
-   - Création des issues pour chaque fonctionnalité/tâche/étape
+   - Attribution des rôles : Tests, DevOps, etc... ✅
+   - Création des issues pour chaque fonctionnalité/tâche/étape 
 
 ### Développement Collaboratif
 **Concepts appliqués : Commandes Git, Workflows, Collaboration**
