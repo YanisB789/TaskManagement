@@ -193,7 +193,11 @@ app.delete('/api/tasks/:id', authenticateToken, (req, res) => {
 
 // Routes des utilisateurs
 app.get('/api/users', authenticateToken, (req, res) => {
-  const usersWithoutPasswords = users.map(({ password, ...user }) => user);
+  const usersWithoutPasswords = users.map(user => ({
+    id: user.id,
+    email: user.email,
+    name: user.name
+  }));
   res.json(usersWithoutPasswords);
 });
 

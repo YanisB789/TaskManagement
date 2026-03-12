@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
 
@@ -18,7 +18,7 @@ export const TaskProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const { token } = useAuth();
 
-  const fetchTasks = async () => {
+  const fetchTasks = useCallback(async () => {
     if (!token) return;
     
     try {
@@ -30,9 +30,9 @@ export const TaskProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [token]);
 
-  const fetchUsers = async () => {
+  const fetchUsers = useCallback(async () => {
     if (!token) return;
     
     try {
@@ -41,7 +41,7 @@ export const TaskProvider = ({ children }) => {
     } catch (error) {
       console.error('Erreur lors du chargement des utilisateurs:', error);
     }
-  };
+  }, [token]);
 
   const createTask = async (taskData) => {
     try {
@@ -89,7 +89,7 @@ export const TaskProvider = ({ children }) => {
       fetchTasks();
       fetchUsers();
     }
-  }, [token]);
+  }, [token, fetchTasks, fetchUsers]);
 
   const value = {
     tasks,
